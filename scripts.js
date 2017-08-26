@@ -51,5 +51,24 @@ text.addEventListener('input', () => {
     }
   }
   morse.value = output;
-  console.log(output);
-})
+});
+
+morse.addEventListener('input', () => {
+  let output = '';
+  let char = '';
+
+  for (let i = 0; i < morse.value.length; i++) {
+    let current = morse.value.charAt(i);
+    if (current == '/') {
+      output += ' ';
+      char = '';
+    }
+    else if (current == ' ') {
+      output += Object.keys(morseLib).find(key => morseLib[key] == char);
+      char = '';
+    } else {
+      char += current;
+    }
+  }
+  text.value = output;
+});
