@@ -1,0 +1,111 @@
+body {
+  margin: 0;
+  font-family: 'Muli';
+  font-size: 1.3em;
+  color: #444;
+  background-color: #EBEBEB;
+}
+
+.wrapper {
+  background-color: #f9f9f9;
+  border: 1px solid #186BB2;
+  margin: 50px 5%;
+  padding: 30px 40px;
+  -webkit-box-shadow: 4px 4px 15px #444;
+          box-shadow: 4px 4px 15px #444;
+}
+
+h1 { font-family: 'Ovo'; }
+
+.io {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 50px 0;
+}
+
+.ioItem {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: #EBEBEB;
+  height: 200px;
+  min-width: 300px;
+}
+
+textarea {
+  width: 100%;
+  height: 100%;
+  padding: 10px 15px;
+  resize: none;
+  border: none;
+  background-color: #EBEBEB;
+  font-size: 1.3em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  outline-color: #186BB2;
+}
+
+label {
+  display: block;
+  border-bottom: 2px solid #186BB2;
+  width: 100%;
+  font-size: 1.1em;
+  padding: 5px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.note {
+  font-size: 0.75em;
+  text-align: right;
+}
+
+.arrows { margin: 0px 20px; }
+
+footer {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.social {
+  width: 65px;
+  margin: 10px;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+.social:hover {
+  filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feColorMatrix type="matrix" color-interpolation-filters="sRGB" values="0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0.2126 0.7152 0.0722 0 0 0 0 0 1 0" /></filter></svg>#filter');
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  opacity: 0.75;
+  -webkit-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+@media screen and (max-width: 875px) {
+  body {
+    text-align: center;
+  }
+  .io {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .arrows {
+    visibility: hidden;
+  }
+  .note { text-align: center; }
+}
+
+@media screen and (max-width: 450px) {
+  .ioItem { min-width: 200px; }
+  .wrapper { margin: 0; }
+}
