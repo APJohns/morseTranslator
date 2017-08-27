@@ -66,7 +66,8 @@ morse.addEventListener('input', () => {
       char = '';
     }
     else if (current == ' ') {
-      output += Object.keys(morseLib).find(key => morseLib[key] == char);
+      let txt = Object.keys(morseLib).find(key => morseLib[key] == char);
+      if (txt != undefined) output += txt;
       char = '';
     } else {
       char += current;
