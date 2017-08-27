@@ -40,21 +40,22 @@ var morseLib = {
   '8': '---..',
   '9': '----.',
   '0': '-----'
-};
 
-text.addEventListener('input', function () {
+  // Text to Morse
+};text.addEventListener('input', function () {
   var output = '';
   for (var i = 0; i < text.value.length; i++) {
     if (text.value.charAt(i) == ' ') {
       output += '   ';
     } else {
       var input = text.value.charAt(i).toUpperCase();
-      output += morseLib[input] + " ";
+      if (morseLib[input] != undefined) output += morseLib[input] + " ";
     }
   }
   morse.value = output;
 });
 
+// Morse to Text
 morse.addEventListener('input', function () {
   var output = '';
   var char = '';

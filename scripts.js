@@ -48,11 +48,10 @@ text.addEventListener('input', () => {
       output += '   ';
     } else {
       let input = text.value.charAt(i).toUpperCase();
-      output += morseLib[input] + " ";
+      if (morseLib[input] != undefined) output += morseLib[input] + " ";
     }
   }
   morse.value = output;
-  console.log(output);
 });
 
 // Morse to Text
