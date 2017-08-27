@@ -48,7 +48,7 @@ text.addEventListener('input', function () {
     if (text.value.charAt(i) == ' ') {
       output += '   ';
     } else {
-      input = text.value.charAt(i).toUpperCase();
+      var input = text.value.charAt(i).toUpperCase();
       output += morseLib[input] + " ";
     }
   }

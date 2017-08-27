@@ -40,19 +40,22 @@ const morseLib = {
   '0' : '-----'
 }
 
+// Text to Morse
 text.addEventListener('input', () => {
   let output = '';
   for (let i = 0; i < text.value.length; i++) {
     if (text.value.charAt(i) == ' ') {
       output += '   ';
     } else {
-      input = text.value.charAt(i).toUpperCase();
+      let input = text.value.charAt(i).toUpperCase();
       output += morseLib[input] + " ";
     }
   }
   morse.value = output;
+  console.log(output);
 });
 
+// Morse to Text
 morse.addEventListener('input', () => {
   let output = '';
   let char = '';
