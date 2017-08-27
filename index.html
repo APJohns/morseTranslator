@@ -6,11 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Morse Translator</title>
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link href='https://fonts.googleapis.com/css?family=Muli|Ovo' rel='stylesheet'>
 </head>
 <body>
-  <textarea id="text"></textarea>
-  <textarea id="morse"></textarea>
+  <div class="wrapper">
+    <h1>Morse Translator</h1>
 
+    <div class="io">
+      <div class="ioItem">
+        <label for="text">Text</label>
+        <textarea id="text"></textarea>
+      </div>
+      <img src="assets/arrows.svg" class="arrows">
+      <div class="ioItem">
+        <label for="morse">Morse</label>
+        <textarea id="morse"></textarea>
+      </div>
+    </div>
+
+    <p class="note">Seperate characters with a space &amp; Use / for spaces<br>
+      i.e. .... . .-.. .-.. ---/.-- --- .-. .-.. -..
+    </p>
+  </div>
   <script type="text/javascript" src="scripts.js"></script>
 </body>
 </html>
