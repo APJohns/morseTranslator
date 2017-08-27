@@ -46,7 +46,7 @@ var morseLib = {
   var output = '';
   for (var i = 0; i < text.value.length; i++) {
     if (text.value.charAt(i) == ' ') {
-      output += '   ';
+      output += ' / ';
     } else {
       var input = text.value.charAt(i).toUpperCase();
       if (morseLib[input] != undefined) output += morseLib[input] + " ";

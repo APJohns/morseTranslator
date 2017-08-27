@@ -45,7 +45,7 @@ text.addEventListener('input', () => {
   let output = '';
   for (let i = 0; i < text.value.length; i++) {
     if (text.value.charAt(i) == ' ') {
-      output += '   ';
+      output += ' / ';
     } else {
       let input = text.value.charAt(i).toUpperCase();
       if (morseLib[input] != undefined) output += morseLib[input] + " ";
