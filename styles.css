@@ -14,13 +14,13 @@ body {
 
 .wrapper {
   background-color: var(--secondary);
+  border: 1px solid var(--accent);
   margin: 50px 5%;
   padding: 30px 40px;
+  box-shadow: 4px 4px 15px #444;
 }
 
-h1 {
-  font-family: 'Ovo';
-}
+h1 { font-family: 'Ovo'; }
 
 .io {
   display: flex;
@@ -51,9 +51,10 @@ textarea {
 label {
   display: block;
   border-bottom: 2px solid var(--accent);
-  width: 66%;
+  width: 100%;
   font-size: 1.1em;
-  margin: 0px 10px;
+  padding: 5px 10px;
+  box-sizing: border-box;
 }
 
 .note {
@@ -63,11 +64,37 @@ label {
 
 .arrows { margin: 0px 20px; }
 
+footer {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.social {
+  width: 65px;
+  margin: 10px;
+  transition: all 0.5s ease-out;
+}
+
+.social:hover {
+  filter: grayscale(100%);
+  opacity: 0.75;
+  transition: all 0.5s ease-out;
+}
+
 @media screen and (max-width: 875px) {
+  body {
+    text-align: center;
+  }
   .io {
     flex-direction: column;
   }
   .arrows {
     visibility: hidden;
   }
+  .note { text-align: center; }
+}
+
+@media screen and (max-width: 450px) {
+  .ioItem { min-width: 200px; }
+  .wrapper { margin: 0; }
 }
